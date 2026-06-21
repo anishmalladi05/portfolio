@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            text-align: center;
+            font-family: sans-serif;
+            background: #111;
+            color: white;
+        }
+
+        img {
+            height: 70vh;
+            width: auto;
+            object-fit: cover;
+            display: block;
+            margin: 20px auto;
+            border-radius: 5vh;
+        }
+
+        button {
+            background-color: white;
+            color: #111;
+            border: none;
+            padding: 10px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin: 0 10px;
+        }
+
+        button:hover{
+            background: #ddd;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 onclick="location.reload()">anish malladi</h1>
+    <img id="photo" src="PHOTOS/AnnetteLake.jpeg" />
+    <div>
+        <button onclick="prev()">← back</button>
+        <button onclick="next()">next →</button>
+    </div>
+
+    <script>
+    const photos = [
+      "PHOTOS/AnnetteLake.jpeg",
+      "PHOTOS/BeachRoad2025.jpeg",
+      "PHOTOS/BoatonBeach.jpeg",
+      "PHOTOS/BuildinginSky.jpeg",
+      "PHOTOS/BuildingwithBridge.jpeg",
+      "PHOTOS/BuildingwithWindows.jpeg",
+      "PHOTOS/ConcreteWalkway.jpeg",
+      "PHOTOS/DiwaliUmbrellas.jpeg",
+      "PHOTOS/DoginWater.jpeg",
+      "PHOTOS/GreenandYellowLeaf.jpeg",
+      "PHOTOS/GreenLeaveswithWaterDroplets.jpeg",
+      "PHOTOS/GroupofTrees.jpeg",
+      "PHOTOS/JasperNationalPark.jpeg",
+      "PHOTOS/LakeinJasper.jpeg",
+      "PHOTOS/OceanShore.jpeg",
+      "PHOTOS/PalmLeafwithWaterDroplets.jpeg",
+      "PHOTOS/PersononBridge.jpeg",
+      "PHOTOS/RedCanoeonLake.jpeg",
+      "PHOTOS/SmallBoatonWater.jpeg",
+      "PHOTOS/SnowyMountain.jpeg",
+      "PHOTOS/StairsBetweenWalls.jpeg",
+      "PHOTOS/TreewithGreenLeaves.jpeg",
+      "PHOTOS/WaterFalling.jpeg",
+      "PHOTOS/CanyonTopView.jpeg",
+      "PHOTOS/Apps.JPG",
+      "PHOTOS/Camera.JPG",
+      "PHOTOS/CameraLens.heic",
+      "PHOTOS/Dock.JPG",
+      "PHOTOS/Filament.JPG",
+      "PHOTOS/Hose.JPG",
+      "PHOTOS/Keyboard.JPG",
+      "PHOTOS/Leafs.JPG",
+      "PHOTOS/PineCil.JPG",
+      "PHOTOS/SkaidsHand.JPG",
+      "PHOTOS/StandBy.JPG",
+    ];
+
+    let current = 0;
+
+    function next() {
+      current = (current + 1) % photos.length;
+      document.getElementById("photo").src = photos[current];
+    }
+
+    function prev() {
+      current = (current - 1 + photos.length) % photos.length;
+      document.getElementById("photo").src = photos[current];
+    }
+  </script>
+  
+</body>
+</html>
