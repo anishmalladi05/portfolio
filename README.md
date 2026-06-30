@@ -9,5 +9,8 @@
 -Code
 <br></br>
 
+This website is hosted on GitHub pages at anishmalladi05.github.io/portfolio/
+
+I used VS Code to make this project
 
 I used Claude to help me with this, but I coded most of the website. I hope you enjoy!
